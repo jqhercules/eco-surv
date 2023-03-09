@@ -136,7 +136,7 @@ const App = () => {
     }
 
     // sub breed
-    if (selectedBreed && !selectedSubBreed && selectedCount) {
+    if (selectedBreed && subBreeds.length > 0 && selectedCount) {
       setData((prevState) => ({
         ...prevState,
         warningMessage: "Please select a sub-breed!",
