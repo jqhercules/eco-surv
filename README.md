@@ -4,7 +4,7 @@
 
 ## Preview link
 
-[Dog Ceo - Vercel](google.com)
+[Dog Ceo - Vercel](eco-surv-pi.vercel.app)
 
 ## Dev setup
 
