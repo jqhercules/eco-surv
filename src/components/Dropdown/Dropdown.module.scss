@@ -1,0 +1,76 @@
+.dropdown {
+  position: relative;
+  min-width: 300px;
+  width: 100%;
+
+  .selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #333;
+    text-transform: capitalize;
+  }
+
+  .carpet {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #000;
+    transition: all 0.25s ease-in-out;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  .options {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    margin: 10px 0 0;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    max-height: 250px;
+    overflow: auto;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+
+    li {
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 18px;
+      color: #333;
+      line-height: 40px;
+      padding: 0.5rem 1rem;
+      text-transform: capitalize;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+}
+
+.hasError {
+  color: #da1f3c;
+  outline: 2px solid #da1f3c;
+}
