@@ -4,13 +4,21 @@
 
 ## Preview link
 
-[Dog Ceo via Vercel](google.com)
+[Dog Ceo - Vercel](google.com)
 
 ## Dev setup
 
 This project uses [vite](https://vitejs.dev/) started fit for a modern experience
 
-Clone the repo and perform the following - yarn - yarn dev - Open [localhost](http://127.0.0.1:5173)
+Clone the repo and perform the following
+
+- yarn
+- yarn dev
+- Open [localhost](http://127.0.0.1:5173)
+
+To perform unit test.
+
+- yarn test
 
 ============================================
 

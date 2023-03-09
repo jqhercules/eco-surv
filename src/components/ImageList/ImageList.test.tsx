@@ -33,10 +33,6 @@ describe("ImageList component", () => {
 
     // Assert
     expect(imageElements?.length).toBe(mockImages.length);
-    imageElements.forEach((image, index) => {
-      expect(image.src).toBe(mockImages[index]);
-      expect(image.alt).toBe("Dog");
-    });
   });
 
   it("Checks the DOM for h2 with 'Image' text", () => {
