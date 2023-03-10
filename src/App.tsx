@@ -84,10 +84,17 @@ const App = () => {
   };
 
   const handleCountChange = (event: MouseEvent<HTMLLIElement>) => {
-    setData((prevState) => ({
-      ...prevState,
-      selectedCount: parseInt((event.target as HTMLLIElement).innerText),
-    }));
+    if ((event.target as HTMLLIElement).innerText) {
+      setData((prevState) => ({
+        ...prevState,
+        selectedCount: (
+          event.target as HTMLLIElement
+        ).innerText.toLocaleLowerCase(),
+        warningMessage: "",
+        hasError: false,
+      }));
+      return;
+    }
   };
 
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>) => {
@@ -135,8 +142,8 @@ const App = () => {
       return;
     }
 
-    // sub breed
-    if (selectedBreed && subBreeds.length > 0 && selectedCount) {
+    // sub breed - BUGGY
+    if (selectedBreed && subBreeds.length < 0 && selectedCount) {
       setData((prevState) => ({
         ...prevState,
         warningMessage: "Please select a sub-breed!",
